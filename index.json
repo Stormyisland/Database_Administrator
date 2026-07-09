@@ -1,1 +1,233 @@
-
+{
+  "metadata": {
+    "title": "Database Administrator Knowledge Base",
+    "version": "1.0.0",
+    "lastUpdated": "2026-07-08",
+    "author": "DBA Team",
+    "description": "Centralized index for database administration documentation, scripts, and monitoring resources"
+  },
+  "categories": {
+    "database_platforms": {
+      "relational": {
+        "postgresql": {
+          "version": "16.x",
+          "docs": "/docs/postgresql/",
+          "backup_scripts": "/scripts/postgresql/backup/",
+          "monitoring": "/monitoring/postgresql/",
+          "performance_tuning": "/guides/postgresql/tuning.md",
+          "replication": "/guides/postgresql/replication.md"
+        },
+        "mysql": {
+          "version": "8.0.x",
+          "docs": "/docs/mysql/",
+          "backup_scripts": "/scripts/mysql/backup/",
+          "monitoring": "/monitoring/mysql/",
+          "performance_tuning": "/guides/mysql/tuning.md",
+          "replication": "/guides/mysql/replication.md"
+        },
+        "sql_server": {
+          "version": "2022",
+          "docs": "/docs/sql_server/",
+          "backup_scripts": "/scripts/sql_server/backup/",
+          "monitoring": "/monitoring/sql_server/",
+          "performance_tuning": "/guides/sql_server/tuning.md",
+          "always_on": "/guides/sql_server/always_on.md"
+        },
+        "oracle": {
+          "version": "19c",
+          "docs": "/docs/oracle/",
+          "backup_scripts": "/scripts/oracle/backup/",
+          "monitoring": "/monitoring/oracle/",
+          "performance_tuning": "/guides/oracle/tuning.md",
+          "rman": "/guides/oracle/rman.md"
+        }
+      },
+      "nosql": {
+        "mongodb": {
+          "version": "6.0.x",
+          "docs": "/docs/mongodb/",
+          "backup_scripts": "/scripts/mongodb/backup/",
+          "monitoring": "/monitoring/mongodb/",
+          "sharding": "/guides/mongodb/sharding.md",
+          "replica_sets": "/guides/mongodb/replica_sets.md"
+        },
+        "redis": {
+          "version": "7.2.x",
+          "docs": "/docs/redis/",
+          "backup_scripts": "/scripts/redis/backup/",
+          "monitoring": "/monitoring/redis/",
+          "sentinel": "/guides/redis/sentinel.md",
+          "cluster": "/guides/redis/cluster.md"
+        },
+        "cassandra": {
+          "version": "4.1.x",
+          "docs": "/docs/cassandra/",
+          "backup_scripts": "/scripts/cassandra/backup/",
+          "monitoring": "/monitoring/cassandra/",
+          "tuning": "/guides/cassandra/tuning.md"
+        },
+        "elasticsearch": {
+          "version": "8.10.x",
+          "docs": "/docs/elasticsearch/",
+          "backup_scripts": "/scripts/elasticsearch/snapshot/",
+          "monitoring": "/monitoring/elasticsearch/",
+          "cluster_setup": "/guides/elasticsearch/cluster.md"
+        }
+      },
+      "cloud_managed": {
+        "aws_rds": "/cloud/aws/rds/",
+        "aws_aurora": "/cloud/aws/aurora/",
+        "azure_sql": "/cloud/azure/sql/",
+        "gcp_cloudsql": "/cloud/gcp/cloudsql/",
+        "gcp_spanner": "/cloud/gcp/spanner/"
+      }
+    },
+    "dba_operations": {
+      "backup_recovery": {
+        "full_backup": "/operations/backup/full.md",
+        "incremental_backup": "/operations/backup/incremental.md",
+        "point_in_time_recovery": "/operations/backup/pitr.md",
+        "restore_procedures": "/operations/backup/restore.md",
+        "backup_validation": "/operations/backup/validation.md",
+        "disaster_recovery_drills": "/operations/backup/dr_drills.md"
+      },
+      "performance_tuning": {
+        "query_optimization": "/operations/performance/query_optimization.md",
+        "index_management": "/operations/performance/indexes.md",
+        "vacuum_analyze": "/operations/performance/vacuum.md",
+        "memory_configuration": "/operations/performance/memory.md",
+        "io_tuning": "/operations/performance/io.md",
+        "slow_query_log_analysis": "/operations/performance/slow_queries.md"
+      },
+      "security_compliance": {
+        "user_management": "/operations/security/users.md",
+        "role_based_access": "/operations/security/rbac.md",
+        "encryption_at_rest": "/operations/security/encryption_rest.md",
+        "encryption_in_transit": "/operations/security/encryption_transit.md",
+        "audit_logging": "/operations/security/audit.md",
+        "compliance": {
+          "gdpr": "/operations/compliance/gdpr.md",
+          "hipaa": "/operations/compliance/hipaa.md",
+          "pci_dss": "/operations/compliance/pci_dss.md",
+          "soc2": "/operations/compliance/soc2.md"
+        },
+        "vulnerability_assessment": "/operations/security/vulnerability.md"
+      },
+      "monitoring_alerts": {
+        "dashboards": "/operations/monitoring/dashboards/",
+        "alerting_rules": "/operations/monitoring/alerts/",
+        "metrics": "/operations/monitoring/metrics.md",
+        "log_aggregation": "/operations/monitoring/logging.md",
+        "prometheus_exporters": "/operations/monitoring/prometheus/",
+        "grafana_dashboards": "/operations/monitoring/grafana/"
+      },
+      "capacity_planning": {
+        "storage_forecasting": "/operations/capacity/storage.md",
+        "cpu_planning": "/operations/capacity/cpu.md",
+        "memory_planning": "/operations/capacity/memory.md",
+        "network_bandwidth": "/operations/capacity/network.md",
+        "scaling_strategies": "/operations/capacity/scaling.md"
+      },
+      "maintenance": {
+        "patch_management": "/operations/maintenance/patching.md",
+        "upgrade_plans": "/operations/maintenance/upgrades.md",
+        "data_archival": "/operations/maintenance/archival.md",
+        "reindexing": "/operations/maintenance/reindex.md",
+        "log_rotation": "/operations/maintenance/logs.md"
+      }
+    },
+    "automation_scripts": {
+      "provisioning": {
+        "terraform": "/automation/terraform/",
+        "ansible": "/automation/ansible/",
+        "cloudformation": "/automation/cloudformation/",
+        "pulumi": "/automation/pulumi/"
+      },
+      "backup_automation": "/automation/backup/",
+      "health_check_scripts": "/automation/health_checks/",
+      "reporting_scripts": "/automation/reporting/",
+      "database_migrations": "/automation/migrations/",
+      "cron_jobs": "/automation/cron/"
+    },
+    "tools": {
+      "monitoring": ["prometheus", "grafana", "datadog", "newrelic", "zabbix", "nagios"],
+      "query_analysis": ["pg_stat_statements", "mysql_slow_log", "sql_server_profiler", "explain_analyze"],
+      "cli_tools": ["psql", "mysql", "sqlcmd", "mongo", "redis-cli", "cqlsh"],
+      "gui_tools": ["pgAdmin", "MySQL Workbench", "SQL Server Management Studio", "Oracle SQL Developer", "MongoDB Compass"],
+      "automation": ["Ansible", "Terraform", "Python", "Shell Scripting", "Perl"],
+      "version_control": ["Git", "Liquibase", "Flyway"]
+    },
+    "incident_response": {
+      "runbooks": "/incident/runbooks/",
+      "common_issues": {
+        "connection_pool_exhaustion": "/incident/common/connection_pool.md",
+        "deadlocks": "/incident/common/deadlocks.md",
+        "high_cpu_usage": "/incident/common/high_cpu.md",
+        "out_of_memory": "/incident/common/oom.md",
+        "disk_full": "/incident/common/disk_full.md",
+        "replication_lag": "/incident/common/replication_lag.md",
+        "corruption": "/incident/common/corruption.md"
+      },
+      "post_mortems": "/incident/post_mortems/",
+      "escalation_procedures": "/incident/escalation.md",
+      "emergency_contacts": "/incident/contacts.json"
+    },
+    "documentation": {
+      "architecture_diagrams": "/docs/architecture/",
+      "data_models": "/docs/data_models/",
+      "er_diagrams": "/docs/er_diagrams/",
+      "data_dictionary": "/docs/data_dictionary/",
+      "sla_definition": "/docs/sla.md",
+      "dr_policy": "/docs/dr_policy.md",
+      "retention_policy": "/docs/retention_policy.md"
+    },
+    "learning_resources": {
+      "internal": {
+        "onboarding": "/training/onboarding/",
+        "dba_bootcamp": "/training/bootcamp/",
+        "best_practices": "/training/best_practices/",
+        "cheat_sheets": "/training/cheat_sheets/"
+      },
+      "external": {
+        "official_docs": "https://www.postgresql.org/docs/",
+        "mysql_docs": "https://dev.mysql.com/doc/",
+        "sql_server_docs": "https://learn.microsoft.com/en-us/sql/",
+        "mongodb_docs": "https://docs.mongodb.com/",
+        "redis_docs": "https://redis.io/docs/"
+      }
+    }
+  },
+  "health_metrics": {
+    "critical": {
+      "cpu_usage_threshold": 80,
+      "memory_usage_threshold": 85,
+      "disk_usage_threshold": 85,
+      "connection_usage_threshold": 90,
+      "replication_delay_threshold": 60,
+      "buffer_hit_ratio_min": 95,
+      "query_time_p95_max": 1000
+    },
+    "warning": {
+      "cpu_usage_threshold": 65,
+      "memory_usage_threshold": 70,
+      "disk_usage_threshold": 70,
+      "connection_usage_threshold": 75,
+      "replication_delay_threshold": 30,
+      "buffer_hit_ratio_min": 90,
+      "query_time_p95_max": 500
+    }
+  },
+  "maintenance_schedules": {
+    "daily": ["log_rotation", "backup_verification", "health_check"],
+    "weekly": ["vacuum_analyze", "index_rebuild", "query_performance_review"],
+    "monthly": ["patch_update", "capacity_review", "security_audit"],
+    "quarterly": ["dr_drill", "architecture_review", "compliance_audit"]
+  },
+  "contacts": {
+    "dba_lead": "jane.doe@company.com",
+    "oncall_dba": "dba-oncall@company.com",
+    "security_team": "security@company.com",
+    "sre_team": "sre@company.com",
+    "escalation": "dba-esc@company.com"
+  }
+}
